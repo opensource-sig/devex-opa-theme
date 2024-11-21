@@ -1,23 +1,24 @@
 {
-  "name": "@redhat-developer/red-hat-developer-hub-theme",
-  "description": "Red Hat Developer Hub Theme",
+  "name": "@brigadeworks/devex-opa-theme",
+  "description": "DevEx-OPA Theme",
   "keywords": [
     "backstage",
-    "rhdh",
+    "devex",
     "theme",
-    "redhat"
+    "idp",
+    "developer-portal"
   ],
-  "homepage": "https://developers.redhat.com/rhdh",
+  "homepage": "https://opensource.brigadeworks.com",
   "version": "0.0.0",
-  "author": "Red Hat",
+  "author": "Brigadeworks",
   "maintainers": [
     {
-      "name": "Christoph Jerolimov",
-      "email": "jerolimov+git@redhat.com"
+      "name": "Jeh1928",
+      "email": "opensource@brigadeworks.com"
     }
   ],
   "license": "Apache-2.0",
-  "repository": "github:redhat-developer/red-hat-developer-hub-theme",
+  "repository": "github:opensource-sig/devex-ops-theme",
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc --watch",
