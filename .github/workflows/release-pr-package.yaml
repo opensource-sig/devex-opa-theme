@@ -54,5 +54,5 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: `New package is available at: \`@redhat-developer/red-hat-developer-hub-theme@${version}\``
+              body: `New package is available at: \`@brigadeworks/devex-opa-theme@${version}\``
             })
