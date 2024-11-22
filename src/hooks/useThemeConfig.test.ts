@@ -1,6 +1,6 @@
-import { renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react";
 import { useApi } from "@backstage/core-plugin-api";
-import { MockConfigApi } from "@backstage/test-utils";
+import { ConfigReader } from "@backstage/config";
 import { JsonObject } from "@backstage/types";
 import { Config } from "../types";
 import { useThemeConfig } from "./useThemeConfig";
@@ -12,7 +12,7 @@ jest.mock("@backstage/core-plugin-api", () => ({
 
 const mockAppConfig = (appConfig: Config) => {
   (useApi as jest.Mock).mockReturnValue(
-    new MockConfigApi(appConfig as unknown as JsonObject),
+      ConfigReader.fromConfigs([{ context: '', data: appConfig as unknown as JsonObject }]),
   );
 };
 
@@ -59,7 +59,7 @@ describe("useThemeConfig", () => {
     });
 
     const { result: lightTheme } = renderHook(() =>
-      useThemeConfig("lightTheme"),
+        useThemeConfig("lightTheme"),
     );
     expect(lightTheme.current).toEqual({
       mode: "light",
@@ -71,14 +71,14 @@ describe("useThemeConfig", () => {
     });
 
     const { result: emptyTheme } = renderHook(() =>
-      useThemeConfig("emptyTheme"),
+        useThemeConfig("emptyTheme"),
     );
     expect(emptyTheme.current).toEqual({
       mode: "light",
     });
 
     const { result: anotherTheme } = renderHook(() =>
-      useThemeConfig("anotherTheme"),
+        useThemeConfig("anotherTheme"),
     );
     expect(anotherTheme.current).toEqual({
       mode: "dark",
@@ -88,7 +88,7 @@ describe("useThemeConfig", () => {
     });
 
     const { result: notFoundTheme } = renderHook(() =>
-      useThemeConfig("notFoundTheme"),
+        useThemeConfig("notFoundTheme"),
     );
     expect(notFoundTheme.current).toEqual({
       mode: "light",

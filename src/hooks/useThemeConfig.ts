@@ -6,7 +6,7 @@ export const useThemeConfig = (themeName: string): ThemeConfig => {
   let configApi: ConfigApi | undefined = undefined;
   try {
     configApi = useApi<ConfigApi>(configApiRef); // NOSONAR
-  } catch (err) {
+  } catch {
     // useApi won't be initialized initially in createApp theme provider, and will get updated later
   }
   return React.useMemo(() => {

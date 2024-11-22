@@ -6,7 +6,7 @@ export const useBranding = (): Branding | undefined => {
   let configApi: ConfigApi | undefined = undefined;
   try {
     configApi = useApi(configApiRef);
-  } catch (err) {
+  } catch {
     // useApi won't be initialized initially in createApp theme provider, and will get updated later
   }
   return React.useMemo(() => {
