@@ -22,24 +22,24 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18.x'
+          node-version: '22.x'
           registry-url: 'https://registry.npmjs.org'
       - name: Install dependencies
-        run: npm ci
+        run: yarn install
       - name: Build
-        run: npm run build
+        run: yarn build
       - name: Lint
-        run: npm run lint
+        run: yarn lint
       - name: Test
-        run: npm test
+        run: yarn test
       - name: Publish to npm
         run: |
           # bash
           full_sha="${{ github.event.pull_request.head.sha }}"
           short_sha="${full_sha::7}"
           version="0.0.0-pr-${{ github.event.number }}-${short_sha}"
-          npm version "$version" --no-git-tag-version
-          npm publish --access=public --tag=latest-pr
+          yarn version --new-version "$version" --no-git-tag-version
+          yarn publish --access public --tag latest-pr
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Add comment
