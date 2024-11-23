@@ -9,7 +9,7 @@
     "developer-portal"
   ],
   "homepage": "https://opensource.brigadeworks.com",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "author": "Brigadeworks",
   "maintainers": [
     {
@@ -56,9 +56,12 @@
     "@backstage/plugin-stack-overflow": "^0.1.30",
     "@backstage/test-utils": "^1.7.2",
     "@changesets/cli": "^2.27.10",
+    "@eslint/eslintrc": "^3.2.0",
+    "@eslint/js": "^9.15.0",
     "@material-table/core": "^6.4.4",
     "@material-ui/lab": "^4.0.0-alpha.61",
     "@react-hookz/web": "^24.0.4",
+    "react-text-truncate": "^0.14.0",
     "@rjsf/material-ui": "^5.22.4",
     "@storybook/addon-essentials": "^8.4.5",
     "@storybook/addon-interactions": "^8.4.5",
@@ -76,8 +79,6 @@
     "eslint": "^9.15.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-storybook": "^0.11.1",
-    "@eslint/js": "^9.15.0",
-    "@eslint/eslintrc": "^3.2.0",
     "humanize-duration": "^3.32.1",
     "jest-image-snapshot": "^6.4.0",
     "material-ui-popup-state": "^5.3.1",
@@ -90,16 +91,19 @@
   },
   "peerDependencies": {
     "@backstage/theme": "^0.6.2",
+    "@emotion/react": "^11.13.5",
+    "@emotion/styled": "^11.13.5",
     "@material-ui/core": "^4.12.4",
     "@material-ui/icons": "^4.11.3",
     "@material-ui/lab": "^4.0.0-alpha.61",
-    "@emotion/react": "^11.13.5",
-    "@emotion/styled": "^11.13.5",
     "@mui/icons-material": "^6.1.8",
     "@mui/material": "^6.1.8"
   },
   "overrides": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
+  },
+  "dependencies": {
+    "@backstage/theme": "^0.6.2"
   }
 }
