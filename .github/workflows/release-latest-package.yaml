@@ -23,7 +23,7 @@ jobs:
         run: yarn test
       - name: Publish to npm
         run: |
-          latest_version=$(yarn info @brigadeworks/devex-opa-theme versions --json | jq -r '.data | last')
+          latest_version=$(yarn info @opensource-sig/devex-opa-theme versions --json | jq -r '.data | last')
           yarn version --new-version $latest_version --no-git-tag-version
           yarn version --new-version minor --no-git-tag-version
           yarn publish --access public --tag latest
