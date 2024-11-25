@@ -42,17 +42,17 @@ jobs:
           yarn publish --access public --tag latest-pr
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - name: Add comment
+      - name: Add comment to PR
         uses: actions/github-script@v7
         with:
+          github-token: ${{ secrets.GIT_TOKEN }}
           script: |
-            // js
-            full_sha="${{ github.event.pull_request.head.sha }}"
-            short_sha=full_sha.slice(0, 7)
-            version=`0.0.0-pr-${{ github.event.number }}-${short_sha}`
-            github.rest.issues.createComment({
+            const fullSha = '${{ github.event.pull_request.head.sha }}';
+            const shortSha = fullSha.slice(0, 7);
+            const version = `0.0.0-pr-${{ github.event.number }}-${shortSha}`;
+            await github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
               body: `New package is available at: \`@brigadeworks/devex-opa-theme@${version}\``
-            })
+            });
