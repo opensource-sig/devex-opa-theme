@@ -1,4 +1,4 @@
-# [RHDH](https://developers.redhat.com/rhdh) / Red Hat Developer Hub Theme 🎨
+# DevEX Theme🎨
 
 A set of theming options for [MUI Material UI](https://mui.com/material-ui/) and
 [Backstage](https://backstage.io/) that look more similar to [PatternFly](https://www.patternfly.org/).
