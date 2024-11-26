@@ -3,9 +3,7 @@ import { type UnifiedThemeOptions } from "@backstage/theme";
 import type { ThemeConfig } from "../types";
 import * as backstage from "../themes/backstage";
 import * as rhdh from "../themes/rhdh";
-import * as rhdh10 from "../themes/rhdh-1.0";
-import { type ThemeColors as RHDH10ThemeColors } from "../themes/rhdh-1.0/types";
-import * as rhdh11 from "../themes/rhdh-1.1";
+import { type ThemeColors as RHDH10ThemeColors } from "../themes/devex-1.2.0/types";
 import * as rhdh120 from "../themes/devex-1.2.0";
 import { migrateThemeConfig } from "../utils/migrateTheme";
 import { mergeUnifiedThemeOptions } from "../utils/mergeTheme";
@@ -19,12 +17,6 @@ export const useThemeOptions = (
     const mode = themeConfig.mode ?? "light";
     const variant = themeConfig.variant ?? "rhdh";
 
-    if (variant === "rhdh-1.0") {
-      return rhdh10.customDarkTheme(themeConfig as RHDH10ThemeColors);
-    }
-    if (variant === "rhdh-1.1") {
-      return rhdh11.customDarkTheme(themeConfig as RHDH10ThemeColors);
-    }
     if (variant === "devex-1.2.0") {
       return rhdh120.customDarkTheme(themeConfig as RHDH10ThemeColors);
     }

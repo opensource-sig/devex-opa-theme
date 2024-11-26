@@ -14,10 +14,6 @@ interface Theme {
 const themes: Theme[] = [
   { title: "Backstage Light", snapshotSuffix: "backstage-light" },
   { title: "Backstage Dark", snapshotSuffix: "backstage-dark" },
-  { title: "RHDH Light 1-0", snapshotSuffix: "rhdh-light-1.0" },
-  { title: "RHDH Dark 1-0", snapshotSuffix: "rhdh-dark-1.0" },
-  { title: "RHDH Light 1-1", snapshotSuffix: "rhdh-light-1.1" },
-  { title: "RHDH Dark 1-1", snapshotSuffix: "rhdh-dark-1.1" },
   { title: "RHDH Light latest", snapshotSuffix: "rhdh-light-latest" },
   { title: "RHDH Dark latest", snapshotSuffix: "rhdh-dark-latest" },
 ];

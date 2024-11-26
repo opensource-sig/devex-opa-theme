@@ -13,8 +13,6 @@ import { createTheme } from "@mui/material/styles";
 import { useThemeConfig } from "../hooks/useThemeConfig";
 
 import * as backstage from "./backstage";
-import * as rhdh10 from "./rhdh-1.0";
-import * as rhdh11 from "./rhdh-1.1";
 import * as devex120 from "./devex-1.2.0";
 import * as rhdh from "./rhdh";
 import { ThemeConfig } from "../types";
@@ -122,42 +120,6 @@ export const getAllThemes = (): AppTheme[] => {
       icon: <DarkIcon />,
       Provider: createThemeProvider(
         createUnifiedTheme(devex120.customDarkTheme({})),
-      ),
-    },
-    {
-      id: "rhdh-1.1-light",
-      title: "RHDH 1.1 Light",
-      variant: "light",
-      icon: <LightIcon />,
-      Provider: createThemeProvider(
-        createUnifiedTheme(rhdh11.customLightTheme({})),
-      ),
-    },
-    {
-      id: "rhdh-1.1-dark",
-      title: "RHDH 1.1 Dark",
-      variant: "dark",
-      icon: <DarkIcon />,
-      Provider: createThemeProvider(
-        createUnifiedTheme(rhdh11.customDarkTheme({})),
-      ),
-    },
-    {
-      id: "rhdh-1.0-light",
-      title: "RHDH 1.0 Light",
-      variant: "light",
-      icon: <LightIcon />,
-      Provider: createThemeProvider(
-        createUnifiedTheme(rhdh10.customLightTheme({})),
-      ),
-    },
-    {
-      id: "rhdh-1.0-dark",
-      title: "RHDH 1.0 Dark",
-      variant: "dark",
-      icon: <DarkIcon />,
-      Provider: createThemeProvider(
-        createUnifiedTheme(rhdh10.customDarkTheme({})),
       ),
     },
   ];
