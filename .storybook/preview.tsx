@@ -24,7 +24,6 @@ import {
   UnifiedThemeProvider,
 } from "@backstage/theme";
 
-
 import * as devex120 from "../src/themes/devex-1.2.0";
 import { ThemeConfig } from "../src/types";
 import { useTheme } from "../src/hooks/useTheme";
@@ -39,7 +38,6 @@ export const apis = [
   [errorApiRef, errorApi],
   [translationApiRef, translationApi],
 ] as const;
-
 
 type Theme =
   | { unifiedTheme: UnifiedTheme }
