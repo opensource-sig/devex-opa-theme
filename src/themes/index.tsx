@@ -15,7 +15,7 @@ import { useThemeConfig } from "../hooks/useThemeConfig";
 import * as backstage from "./backstage";
 import * as rhdh10 from "./rhdh-1.0";
 import * as rhdh11 from "./rhdh-1.1";
-import * as rhdh120 from "./rhdh-1.2.0";
+import * as devex120 from "./devex-1.2.0";
 import * as rhdh from "./rhdh";
 import { ThemeConfig } from "../types";
 import { useTheme } from "../hooks/useTheme";
@@ -107,21 +107,21 @@ export const getAllThemes = (): AppTheme[] => {
       Provider: createThemeProvider(themes.dark),
     },
     {
-      id: "rhdh-1.2.0-light",
+      id: "devex-1.2.0-light",
       title: "RHDH 1.2.0 Light",
       variant: "light",
       icon: <LightIcon />,
       Provider: createThemeProvider(
-        createUnifiedTheme(rhdh120.customLightTheme({})),
+        createUnifiedTheme(devex120.customLightTheme({})),
       ),
     },
     {
-      id: "rhdh-1.2.0-dark",
+      id: "devex-1.2.0-dark",
       title: "RHDH 1.2.0 Dark",
       variant: "dark",
       icon: <DarkIcon />,
       Provider: createThemeProvider(
-        createUnifiedTheme(rhdh120.customDarkTheme({})),
+        createUnifiedTheme(devex120.customDarkTheme({})),
       ),
     },
     {

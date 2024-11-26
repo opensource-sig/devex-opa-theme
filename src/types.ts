@@ -89,7 +89,7 @@ export interface ThemeOptions {
 
 export interface ThemeConfig {
   /** Optional key to load different defaults. Fallbacks to the latest `rhdh` theme if not defined. */
-  variant?: "rhdh" | "rhdh-1.0" | "rhdh-1.1" | "rhdh-1.2.0" | "backstage";
+  variant?: "rhdh" | "rhdh-1.0" | "rhdh-1.1" | "devex-1.2.0" | "backstage";
 
   /** Light or dark theme. Automatically selects `dark` if the theme name contains the keyword "dark". */
   mode?: "light" | "dark";

@@ -6,7 +6,7 @@ import * as rhdh from "../themes/rhdh";
 import * as rhdh10 from "../themes/rhdh-1.0";
 import { type ThemeColors as RHDH10ThemeColors } from "../themes/rhdh-1.0/types";
 import * as rhdh11 from "../themes/rhdh-1.1";
-import * as rhdh120 from "../themes/rhdh-1.2.0";
+import * as rhdh120 from "../themes/devex-1.2.0";
 import { migrateThemeConfig } from "../utils/migrateTheme";
 import { mergeUnifiedThemeOptions } from "../utils/mergeTheme";
 import { createPageThemes } from "../utils/createPageThemes";
@@ -25,7 +25,7 @@ export const useThemeOptions = (
     if (variant === "rhdh-1.1") {
       return rhdh11.customDarkTheme(themeConfig as RHDH10ThemeColors);
     }
-    if (variant === "rhdh-1.2.0") {
+    if (variant === "devex-1.2.0") {
       return rhdh120.customDarkTheme(themeConfig as RHDH10ThemeColors);
     }
 

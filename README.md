@@ -1,4 +1,4 @@
-# [RHDH](https://developers.redhat.com/rhdh) / Red Hat Developer Hub Theme 🎨
+# DevEx-OPA Theme 🎨
 
 A set of theming options for [MUI Material UI](https://mui.com/material-ui/) and
 [Backstage](https://backstage.io/) that look more similar to [PatternFly](https://www.patternfly.org/).
@@ -8,12 +8,12 @@ a [Storybook test-runner](https://github.com/storybookjs/test-runner) for automa
 
 ## API
 
-Returns all testable themes (incl. the backstage default color scheme and older RHDH versions):
+Returns all testable themes (incl. the backstage default color scheme and older DevEx Theme versions):
 
 * `getAllThemes: () => AppTheme[]`
 * `useAllThemes: () => AppTheme[]`
 
-Returns the latest, not released RHDH light and dark theme for your backstage/RHDH instance:
+Returns the latest, not released DevEX light and dark theme for your backstage/DevEx instance:
 
 * `getThemes: () => AppTheme[]`
 * `useThemes: () => AppTheme[]`
@@ -22,31 +22,31 @@ Returns the latest, not released RHDH light and dark theme for your backstage/RH
 ## Install dependencies
 
 ```shell
-npm install @redhat-developer/red-hat-developer-hub-theme
+npm install @opensource-sig/devex-opa-theme
 ```
 
 or
 
 ```shell
-yarn add @redhat-developer/red-hat-developer-hub-theme
+yarn add @opensource-sig/devex-opa-theme
 ```
 
-## Use it with RHDH app
+## Use it with DevEx app
 
-Starting with 1.2 this library is shipped with your RHDH installation.
+Starting with latest versions this library is shipped with your DevEx installation.
 
-On older RHDH instances you can install it:
+On older DevEx instances you can install it:
 
 1. Install the dependency with
 
    ```shell
-   yarn workspace app add @redhat-developer/red-hat-developer-hub-theme
+   yarn workspace app add @opensource-sig/devex-opa-theme
    ```
 
 2. In `packages/app/src/components/DynamicRoot/DynamicRoot.tsx`
 
    ```tsx
-   import { useThemes } from '@redhat-developer/red-hat-developer-hub-theme';
+   import { useThemes } from '@opensource-sig/devex-opa-theme';
 
    // ...
 
@@ -67,13 +67,13 @@ On older RHDH instances you can install it:
 1. Install the dependency with
 
    ```shell
-   yarn workspace app add @redhat-developer/red-hat-developer-hub-theme
+   yarn workspace app add @opensource-sig/devex-opa-theme
    ```
 
 2. Update `packages/app/src/App.tsx` and apply the themes to `createApp`:
 
    ```tsx
-   import { getThemes } from '@redhat-developer/red-hat-developer-hub-theme';
+   import { getThemes } from '@opensource-sig/devex-opa-theme';
 
    // ...
 
@@ -89,13 +89,13 @@ On older RHDH instances you can install it:
 1. Install the dependency with
 
    ```shell
-   yarn workspace <plugin-root or plugin-name> add @redhat-developer/red-hat-developer-hub-theme
+   yarn workspace <plugin-root or plugin-name> add @opensource-sig/devex-opa-theme
    ```
 
 2. Add to your `*/dev/index.tsx`:
 
    ```tsx
-   import { getAllThemes } from '@redhat-developer/red-hat-developer-hub-theme';
+   import { getAllThemes } from '@opensource-sig/devex-opa-theme';
 
    // ...
 
@@ -110,10 +110,10 @@ On older RHDH instances you can install it:
 
 ## Use `yarn link`
 
-1. Clone the rhdh theme and run `npm link` in it:
+1. Clone the devex-opa-theme and run `npm link` in it:
 
    ```shell
-   cd red-hat-developer-hub-theme
+   cd devex-opa-theme
    yarn link
    ```
 
@@ -121,7 +121,7 @@ On older RHDH instances you can install it:
 
    ```shell
    cd ../backstage-plugins
-   yarn link @redhat-developer/red-hat-developer-hub-theme
+   yarn link @opensource-sig/devex-opa-theme
    ```
 
 ## Additional links

@@ -26,7 +26,7 @@ import {
 
 import * as rhdh10 from "../src/themes/rhdh-1.0";
 import * as rhdh11 from "../src/themes/rhdh-1.1";
-import * as rhdh120 from "../src/themes/rhdh-1.2.0";
+import * as devex120 from "../src/themes/devex-1.2.0";
 import { ThemeConfig } from "../src/types";
 import { useTheme } from "../src/hooks/useTheme";
 
@@ -77,8 +77,8 @@ const themes: Record<string, Theme> = {
   "RHDH Dark 1-1": {
     unifiedThemeOptions: rhdh11.customDarkTheme(rhdhColors.dark),
   },
-  "RHDH Light 1-2-0": { unifiedThemeOptions: rhdh120.customLightTheme({}) },
-  "RHDH Dark 1-2-0": { unifiedThemeOptions: rhdh120.customDarkTheme({}) },
+  "DevEx Light 1-2-0": { unifiedThemeOptions: devex120.customLightTheme({}) },
+  "DevEx Dark 1-2-0": { unifiedThemeOptions: devex120.customDarkTheme({}) },
 
   "RHDH Light latest": {
     themeConfig: {
