@@ -4068,11 +4068,6 @@
   resolved "https://registry.yarnpkg.com/@storybook/components/-/components-8.4.5.tgz#039e4cb5090c56c47fc10f0c5ecda77f4b015c7f"
   integrity sha512-2PdnKfqNNv3sO7qILgWXiNvmLOi503oN9OMemNCQjTIvdvySc5JpS9/eClwcl/JfmE4qHdSHZr8dLLkBM9S7+Q==
 
-"@storybook/core-common@^8.0.0":
-  version "8.4.5"
-  resolved "https://registry.yarnpkg.com/@storybook/core-common/-/core-common-8.4.5.tgz#5ba99660e6f673700867e702384c013e604dfbb9"
-  integrity sha512-YVzgTOk26i8u5JGX4A1ghDxfwz15ShOl2jem9doVIu4IQFiYWmPeBcl7HbpsZFAx8TwNFibx74ROkiE1lFl5CQ==
-
 "@storybook/core-webpack@8.4.5":
   version "8.4.5"
   resolved "https://registry.yarnpkg.com/@storybook/core-webpack/-/core-webpack-8.4.5.tgz#b17422cff80c638e3478406193acedb9be2d50cb"
@@ -4104,11 +4099,6 @@
   integrity sha512-qd2rQTglOTS+phQmTbNTXNjNyxdGvolaqHqDNMw3Vf6h9o3U+mLkwnDWNVnQ9oqvOoUEAqpBthgwzU9FhkIk+A==
   dependencies:
     unplugin "^1.3.1"
-
-"@storybook/csf-tools@^8.0.0":
-  version "8.4.5"
-  resolved "https://registry.yarnpkg.com/@storybook/csf-tools/-/csf-tools-8.4.5.tgz#5e3c3b2f7d94ff30a9e81284d4ec5fbde92bf5e9"
-  integrity sha512-9s49acxRkGMjhDOxXrXcnAhJFpXl5vVwT92TDImdUQSKsQdR8nlSCJAA3KNvQorAAcmnjDdsOfKtQP4JL8lVUA==
 
 "@storybook/csf@^0.1.11":
   version "0.1.11"
@@ -4158,7 +4148,7 @@
     tsconfig-paths "^4.2.0"
     webpack "5"
 
-"@storybook/preview-api@8.4.5", "@storybook/preview-api@^8.0.0":
+"@storybook/preview-api@8.4.5":
   version "8.4.5"
   resolved "https://registry.yarnpkg.com/@storybook/preview-api/-/preview-api-8.4.5.tgz#f8c046575c68062eda1de9494e7118571d20c72a"
   integrity sha512-MKIZ2jQO/3cUdsT57eq8jRgB6inALo9BxrQ88f7mqzltOkMvADvTAY6y8JZqTUoDzWTH/ny/8SGGdtpqlxRuiQ==
@@ -4203,20 +4193,17 @@
     "@storybook/react-dom-shim" "8.4.5"
     "@storybook/theming" "8.4.5"
 
-"@storybook/test-runner@^0.19.1":
-  version "0.19.1"
-  resolved "https://registry.yarnpkg.com/@storybook/test-runner/-/test-runner-0.19.1.tgz#b0a94bd09d9914f47e23d11779690ffc5b5164a7"
-  integrity sha512-Nc4djXw3Lv3AAXg6TJ7yVTeuMryjMsTDd8GCbE/PStU602rpe8syEqElz78GPoJqB1VYWQ3T9pcu93MKyHT+xQ==
+"@storybook/test-runner@^0.20.1":
+  version "0.20.1"
+  resolved "https://registry.yarnpkg.com/@storybook/test-runner/-/test-runner-0.20.1.tgz#e2efa6266d512312a6b810db376da2919008cccd"
+  integrity sha512-3WU/th/uncIR6vpQDK9hKjiZjmczsluoLbgkRV7ufxY9IgHCGcbIjvT5EPS+XZIaOrNGjaPsyB5cE1okKn9iSA==
   dependencies:
     "@babel/core" "^7.22.5"
     "@babel/generator" "^7.22.5"
     "@babel/template" "^7.22.5"
     "@babel/types" "^7.22.5"
     "@jest/types" "^29.6.3"
-    "@storybook/core-common" "^8.0.0"
     "@storybook/csf" "^0.1.11"
-    "@storybook/csf-tools" "^8.0.0"
-    "@storybook/preview-api" "^8.0.0"
     "@swc/core" "^1.5.22"
     "@swc/jest" "^0.2.23"
     expect-playwright "^0.8.0"
